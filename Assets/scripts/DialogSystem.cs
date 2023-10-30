@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.UI;
 public class DialogSystem : MonoBehaviour
 {
+    [Header("角色组件")]
+    public GameObject character;
+
     [Header("UI组件")]
     public TextMeshProUGUI textLabel;
 
@@ -22,6 +25,7 @@ public class DialogSystem : MonoBehaviour
     void Awake()
     {
         GetTextFormFile(textFile);
+        character.SetActive(false);
     }
     private void OnEnable()
     {
@@ -35,6 +39,7 @@ public class DialogSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R)&& index==textList.Count)
         {
             gameObject.SetActive(false);
+            character.SetActive(true);
             index = 0;
             return;
         }
@@ -59,7 +64,7 @@ public class DialogSystem : MonoBehaviour
     {
         textList.Clear();
         index = 0;
-        var lineData = file.text.Split('\r','\n');
+        var lineData = file.text.Split('\n');
 
         foreach(var line in lineData)
         {
