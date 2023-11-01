@@ -2,37 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class DialogSystem : MonoBehaviour
 {
+    [Header("关卡组件")]
+    public GameObject levelcontroller;
+    public string Scenename = "";
     [Header("角色组件")]
     public GameObject character;
 
     [Header("UI组件")]
     public TextMeshProUGUI textLabel;
+    public TextMeshProUGUI textname;
 
     [Header("文本文件")]
-    public TextAsset textFile;
-    public int index;
+    public List<TextAsset> textFile;
+    public int novelcnt ;
     public float textSpeed;
 
     bool textfinished;
     bool canceltyping;
+    int index;
+    
 
     List<string> textList = new List<string>();
 
     // Start is called before the first frame update
-    void Awake()
-    {
-        GetTextFormFile(textFile);
-        character.SetActive(false);
-    }
+
     private void OnEnable()
     {
+         GetTextFormFile(textFile[novelcnt]);
         textfinished = true;
         StartCoroutine(SetTextUI());
     }
 
+    private void Start()
+    {
+        
+        character.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -41,12 +50,13 @@ public class DialogSystem : MonoBehaviour
             gameObject.SetActive(false);
             character.SetActive(true);
             index = 0;
+            if(levelcontroller.GetComponent<Level1Controll>().maxnovelcount==novelcnt)
+            {
+                SceneManager.LoadScene(Scenename);
+            }
             return;
         }
-        //if (Input.GetKeyDown(KeyCode.R)&&textfinished)
-        //{
-        //    StartCoroutine(SetTextUI());
-        //}
+
         if(Input.GetKeyDown(KeyCode.R))
         {
             if(textfinished && !canceltyping)
@@ -76,6 +86,9 @@ public class DialogSystem : MonoBehaviour
     {
         textfinished=false;
         textLabel.text = "";
+
+        textname.text = textList[index++];
+
         for (int i = 0; i < textList[index].Length && (!canceltyping); i++)
         {
             textLabel.text += textList[index][i];

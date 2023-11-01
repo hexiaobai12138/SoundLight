@@ -1,19 +1,18 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class TalkButton : MonoBehaviour
+public class Levelchange : MonoBehaviour
 {
     public GameObject Button;
-    public GameObject talkUI;
     public GameObject levelcontroller;
-    public int Novelcount=0;
+    public int Novelcount = 0;
+    public string Scenename = "";
 
-
-    private DialogSystem dialogSystem;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(levelcontroller.GetComponent<Level1Controll>().noveling==Novelcount)
+        if (levelcontroller.GetComponent<Level1Controll>().noveling == Novelcount)
         {
             Button.SetActive(true);
         }
@@ -28,12 +27,8 @@ public class TalkButton : MonoBehaviour
     {
         if (Button.activeSelf && Input.GetKeyDown(KeyCode.R))
         {
-            dialogSystem=talkUI.GetComponent<DialogSystem>();
-            dialogSystem.novelcnt=Novelcount;
             Button.SetActive(false);
-            talkUI.SetActive(true);
-            levelcontroller.GetComponent<Level1Controll>().noveling++;
+            SceneManager.LoadScene(Scenename);
         }
     }
-
 }
