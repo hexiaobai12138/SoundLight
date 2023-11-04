@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+
 public class DialogSystem : MonoBehaviour
 {
     [Header("¹Ø¿¨×é¼þ")]
