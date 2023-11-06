@@ -64826,6 +64826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cea15a1e95533946b0c7ff674a6b79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Levelcnt: 2
   talkUI: {fileID: 973574430}
   Novelcount: 0
   noveling: 0

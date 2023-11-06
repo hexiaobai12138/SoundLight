@@ -23640,6 +23640,7 @@ MonoBehaviour:
   levelcontroller: {fileID: 764391870}
   Novelcount: 2
   Scenename: Select
+  ending: 1
 --- !u!61 &533101632
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38513,6 +38514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cea15a1e95533946b0c7ff674a6b79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Levelcnt: 0
   talkUI: {fileID: 1163537281}
   Novelcount: 0
   noveling: 0

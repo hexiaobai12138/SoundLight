@@ -5,6 +5,7 @@ using UnityEngine;
 public class Level1Controll : MonoBehaviour
 {
     // Start is called before the first frame update
+    public int Levelcnt;
     public GameObject talkUI;
     public int Novelcount = 0;
     public int noveling = 0;

@@ -52,6 +52,7 @@ public class DialogSystem : MonoBehaviour
             index = 0;
             if(levelcontroller.GetComponent<Level1Controll>().maxnovelcount==novelcnt)
             {
+                UILevel.Levels[levelcontroller.GetComponent<Level1Controll>().Levelcnt] = true;
                 SceneManager.LoadScene(Scenename);
             }
             return;
