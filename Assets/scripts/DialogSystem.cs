@@ -20,10 +20,11 @@ public class DialogSystem : MonoBehaviour
     public List<TextAsset> textFile;
     public int novelcnt ;
     public float textSpeed;
+    public int index;
 
     bool textfinished;
     bool canceltyping;
-    int index;
+    
     
 
     List<string> textList = new List<string>();
@@ -39,7 +40,6 @@ public class DialogSystem : MonoBehaviour
 
     private void Start()
     {
-        
         character.SetActive(false);
     }
     // Update is called once per frame
