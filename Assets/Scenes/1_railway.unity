@@ -38514,7 +38514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cea15a1e95533946b0c7ff674a6b79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Levelcnt: 0
+  Levelcnt: 1
   talkUI: {fileID: 1163537281}
   Novelcount: 0
   noveling: 0

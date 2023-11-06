@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class UILevel : MonoBehaviour
 {
-    public static List<bool> Levels= new List<bool> { false,false,false,false};
+    public static List<bool> Levels= new List<bool> { true,false,false,false};
 
 }
