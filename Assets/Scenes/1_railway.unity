@@ -23538,7 +23538,7 @@ Transform:
   m_Children:
   - {fileID: 379765759}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &533101629
 GameObject:
@@ -23590,7 +23590,7 @@ MonoBehaviour:
   Button: {fileID: 1035674806}
   levelcontroller: {fileID: 764391870}
   Novelcount: 2
-  Scenename: 2_classroom
+  Scenename: Select
 --- !u!61 &533101632
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43492,7 +43492,7 @@ Transform:
   - {fileID: 1119130936}
   - {fileID: 533101630}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1035674806
 GameObject:
@@ -49130,7 +49130,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1245350779
 MonoBehaviour:
@@ -68864,7 +68864,7 @@ Transform:
   m_Children:
   - {fileID: 1405467560}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1483138857
 AudioSource:

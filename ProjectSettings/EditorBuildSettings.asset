@@ -32,4 +32,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Select.unity
     guid: 2ca48c61401ed194a921b589f29a4a8d
+  - enabled: 1
+    path: Assets/Scenes/beginword 0.unity
+    guid: da627bc61c9f1794188e4fdb6203e95c
+  - enabled: 1
+    path: Assets/Scenes/beginword 1.unity
+    guid: a47e8ab947e21004fbf7ec3137ce5a6d
+  - enabled: 1
+    path: Assets/Scenes/beginword 2.unity
+    guid: 3de5a589fb4424240acf544cc2cf06b9
+  - enabled: 1
+    path: Assets/Scenes/beginword 3.unity
+    guid: c68aba280de31394bbb81c01ee5ad027
+  - enabled: 1
+    path: Assets/Scenes/beginword 4.unity
+    guid: edadaf68e39decb4b881c151b13c1668
   m_configObjects: {}

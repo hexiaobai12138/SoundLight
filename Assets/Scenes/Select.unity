@@ -435,7 +435,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 4_hall
+          m_StringArgument: beginword 3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &645327420
@@ -982,7 +982,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 1_home
+          m_StringArgument: beginword 0
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1910774150
@@ -1267,7 +1267,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 2_classroom
+          m_StringArgument: beginword 1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2019188335
@@ -1632,7 +1632,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 3_home
+          m_StringArgument: beginword 2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2078270529

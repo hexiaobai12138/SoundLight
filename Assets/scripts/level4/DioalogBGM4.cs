@@ -20,23 +20,47 @@ public class DioalogBGM4 : MonoBehaviour
     void Update()
     {
 
-
-        if (Panel.activeSelf&&!audioSource.isPlaying)
+        if (Panel.activeSelf)
         {
+            if (!audioSource.isPlaying)
+            {
+                if (dialogsystem.novelcnt == 0)
+                {
+                    bgmcontroll.PlayMusic(0);
+                }
+                else if (dialogsystem.novelcnt == 1)
+                {
+                    bgmcontroll.FadeIn(1);
+                }
+                else if (dialogsystem.novelcnt == 2)
+                {
+                    bgmcontroll.FadeIn(1);
+                }
+                else if (dialogsystem.novelcnt == 3 && dialogsystem.index < 16)
+                {
+                    bgmcontroll.FadeIn(1);
+                }
+                
+            }
+            else
+            {
+                if (dialogsystem.novelcnt == 3)
+                {
+                    if (dialogsystem.index >= 16)
+                    {
+                        bgmcontroll.FadeOut(1);
+                    }
+                }
 
-            if (dialogsystem.novelcnt == 0)
-            {
-                bgmcontroll.PlayMusic(0);
             }
-            if (dialogsystem.novelcnt == 1)
-            {
-                bgmcontroll.PlayMusic(1);
-            }
-            
         }
+
+
+
         else if (!Panel.activeSelf)
         {
             bgmcontroll.FadeOut(1);
+
         }
     }
 }

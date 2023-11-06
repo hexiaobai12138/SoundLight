@@ -11,13 +11,13 @@ public class Sceneword : MonoBehaviour
 
     [Header("文本文件")]
     public List<TextAsset> textFile;
-    public int scenecnt;
+    public int scenecnt=0;
     public float textSpeed;
 
     bool textfinished;
     bool canceltyping;
     int index;
-    List<string> ToScene= new List<string>{ "1_home", "2_classroom", "3_home", "4_hall" ,"Begin"};
+    List<string> ToScene= new List<string>{ "1_home", "2_classroom", "3_home", "4_hall" ,"Select"};
 
 
     List<string> textList = new List<string>();

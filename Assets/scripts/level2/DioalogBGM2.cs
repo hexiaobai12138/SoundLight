@@ -19,24 +19,48 @@ public class DioalogBGM2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-        if (Panel.activeSelf&&!audioSource.isPlaying)
+        if (Panel.activeSelf)
         {
+            if(!audioSource.isPlaying)
+            {
+                if (dialogsystem.novelcnt == 0)
+                {
+                    if (dialogsystem.index == 2)
+                    {
+                        bgmcontroll.PlayMusic(0);
+                    }
+                }
+                if (dialogsystem.novelcnt == 1)
+                {
+                    bgmcontroll.PlayMusic(2);
+                }
+                if(dialogsystem.novelcnt == 3)
+                {
+                    bgmcontroll.PlayMusic(3);
+                }
+            }
 
-            if (dialogsystem.novelcnt == 0)
+
+            else
             {
-                bgmcontroll.PlayMusic(0);
+                if (dialogsystem.novelcnt == 0)
+                {
+                    if(dialogsystem.index>=32)
+                    {
+                        bgmcontroll.FadeOut(1);
+                    }
+                }
+
             }
-            if (dialogsystem.novelcnt == 1)
-            {
-                bgmcontroll.PlayMusic(1);
-            }
-            
+
         }
+
+
+
         else if (!Panel.activeSelf)
         {
             bgmcontroll.FadeOut(1);
+            
         }
     }
 }
