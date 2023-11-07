@@ -8,7 +8,7 @@ public class Outsubway : MonoBehaviour
     public Vector2 direction;
     public Rigidbody2D rbody;
     // Start is called before the first frame update
-    private const float changetime = 18f;
+    private const float changetime = 25f;
     public float changetimer;
     public bool RorL;
     void Start()
@@ -40,7 +40,7 @@ public class Outsubway : MonoBehaviour
                 direction = Vector2.right;
             }
         }
-        if(changetimer < -1f)
+        if(changetimer < 0f)
         {
             gameObject.SetActive(false);
         }
