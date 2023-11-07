@@ -5,7 +5,7 @@ public class BGMcontroll : MonoBehaviour
 {
 
     public List<AudioClip> AudioClipList;
-
+    public float nowVolume=0.6f;
     private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
@@ -16,14 +16,14 @@ public class BGMcontroll : MonoBehaviour
 
     public void PlayMusic(int bgmid = 0)
     {
-        audioSource.volume = 0.6f;
+        audioSource.volume = nowVolume;
         audioSource.clip = AudioClipList[bgmid];
         audioSource.Play();
     }
 
     public void UnPauseMusic()
     {
-        audioSource.volume = 0.6f;
+        audioSource.volume = nowVolume;
         audioSource.UnPause();
     }
 
@@ -50,7 +50,7 @@ public class BGMcontroll : MonoBehaviour
 
     private IEnumerator FadeInCoroutine(float fadeTime)
     {
-        float targetVolume = 0.6f;
+        float targetVolume = nowVolume;
         audioSource.volume = 0f;
         audioSource.UnPause();
         while (audioSource.volume < targetVolume)
