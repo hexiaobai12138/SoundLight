@@ -17,7 +17,7 @@ public class Sceneword : MonoBehaviour
     bool textfinished;
     bool canceltyping;
     int index;
-    List<string> ToScene= new List<string>{ "1_home", "2_classroom", "3_home", "4_hall" ,"Select"};
+    List<string> ToScene= new List<string>{ "1_home", "2_classroom", "3_home", "4_hall" , "Main" };
 
 
     List<string> textList = new List<string>();

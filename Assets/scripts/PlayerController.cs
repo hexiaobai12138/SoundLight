@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 //控制角色移动
 public class PlayerController : MonoBehaviour
 {
@@ -23,6 +24,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (hp <= 0)//判断是否死亡
+        {
+
+        }
+
+
         float horizontal = Input.GetAxis("Horizontal"); //水平输入AD
         float vertical = Input.GetAxis("Vertical");     //竖直输入WS
         m_Movement = new Vector3(horizontal * Time.deltaTime * speed, vertical * Time.deltaTime * speed, 0);

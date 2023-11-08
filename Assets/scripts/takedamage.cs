@@ -15,10 +15,6 @@ public class takedamage : MonoBehaviour
             Postprocessing.GetComponent<postprocessing>().Takedamage();
             StartCoroutine(wudi());
         }
-        if(Character.GetComponent<PlayerController>().hp <= 0)
-        {
-
-        }
     }
     private IEnumerator wudi()
     {
