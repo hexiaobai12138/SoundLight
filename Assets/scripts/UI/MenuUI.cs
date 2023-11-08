@@ -11,13 +11,23 @@ public class MenuUI : MonoBehaviour
     {
         MenuPanel.SetActive(state);
     }
-    public void Pause()
+
+    //暂停
+    public static void Pause()
     {
         Time.timeScale = 0;
     }
-    public void Continue()
+
+    //继续
+    public static void Continue()
     {
         Time.timeScale = 1;
+    }
+
+    //Tip按钮按下
+    public static void TipButtonClick() {
+        Pause();
+        //其他事件
     }
 }
 
