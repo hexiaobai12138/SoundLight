@@ -29,7 +29,10 @@ public class Levelchange : MonoBehaviour
         if (Button.activeSelf && Input.GetKeyDown(KeyCode.R))
         {
             Button.SetActive(false);
-            UILevel.Levels[levelcontroller.GetComponent<Level1Controll>().Levelcnt] = true;
+            if (ending)
+            {
+               UILevel.Levels[levelcontroller.GetComponent<Level1Controll>().Levelcnt+1] = ending;
+            }
             SceneManager.LoadScene(Scenename);
         }
     }

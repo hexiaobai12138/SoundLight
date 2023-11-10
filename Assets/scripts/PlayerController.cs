@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
+using UnityEngine.SceneManagement;
+
 //¿ØÖÆ½ÇÉ«ÒÆ¶¯
 public class PlayerController : MonoBehaviour
 {
@@ -26,7 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         if (hp <= 0)//ÅÐ¶ÏÊÇ·ñËÀÍö
         {
-
+            SceneManager.LoadScene("LoseTest");
         }
 
 

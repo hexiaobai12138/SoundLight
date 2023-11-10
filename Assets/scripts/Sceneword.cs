@@ -34,14 +34,14 @@ public class Sceneword : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && index == textList.Count)
+        if (Input.anyKeyDown && index == textList.Count)
         {            
             index = 0;
             SceneManager.LoadScene(ToScene[scenecnt]);
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.anyKeyDown)
         {
             if (textfinished && !canceltyping)
             {

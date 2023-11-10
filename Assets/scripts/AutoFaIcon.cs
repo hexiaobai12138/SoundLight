@@ -13,7 +13,6 @@ public class AutoFaIcon : MonoBehaviour
     public float speed = 1f;
 
 
-    int cnt = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,33 +29,30 @@ public class AutoFaIcon : MonoBehaviour
     void Update()
     {
         transform.position = transform.parent.position;
-        cnt++;
-        if (cnt==2500)
-        {
-            cnt = 0;
+        if(!particleSystem.isPlaying)
+            Shootfalcon();
 
-            particleSystem.Emit(particleNumber);//将刚刚初始化的particleNumber个粒子发射出去
-            particleSystem.GetParticles(particlesArray);
-            for (int i = 0; i < particleNumber; i++)
-            {//为每个粒子设置其位置
-                float angle = Random.Range(0.0f, 360.0f);//位置为0 - 360度的随机一个角度
-                particlesArray[i].position = new Vector3(radiusOriginal * Mathf.Cos(angle), radiusOriginal * Mathf.Sin(angle), 0.0f);//为每个粒子坐标赋值
-                particlesArray[i].position += transform.position;
+    }
+
+    private void Shootfalcon()
+    {
+        particleSystem.Emit(particleNumber);//将刚刚初始化的particleNumber个粒子发射出去
+        particleSystem.GetParticles(particlesArray);
+        for (int i = 0; i < particleNumber; i++)
+        {//为每个粒子设置其位置
+            float angle = Random.Range(0.0f, 360.0f);//位置为0 - 360度的随机一个角度
+            particlesArray[i].position = new Vector3(radiusOriginal * Mathf.Cos(angle), radiusOriginal * Mathf.Sin(angle), 0.0f);//为每个粒子坐标赋值
+            particlesArray[i].position += transform.position;
 
 
-                Vector3 particlePosition = particlesArray[i].position;
-                Vector3 objectPosition = transform.position;
-                Vector3 vector2target = particlePosition - objectPosition;
+            Vector3 particlePosition = particlesArray[i].position;
+            Vector3 objectPosition = transform.position;
+            Vector3 vector2target = particlePosition - objectPosition;
 
-                particlesArray[i].velocity = vector2target.normalized * speed;
+            particlesArray[i].velocity = vector2target.normalized * speed;
 
-            }
-
-            particleSystem.SetParticles(particlesArray, particlesArray.Length);//设置该粒子系统的粒子。
         }
-
-
-
+        particleSystem.SetParticles(particlesArray, particlesArray.Length);//设置该粒子系统的粒子。
     }
 
 }

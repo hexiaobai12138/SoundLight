@@ -13,7 +13,6 @@ public class AutoFaIconCar : MonoBehaviour
     public float speed = 1f;
 
 
-    int cnt = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,10 +29,8 @@ public class AutoFaIconCar : MonoBehaviour
     void Update()
     {
         transform.position = transform.parent.position;
-        cnt++;
-        if (cnt==1000)
+        if (!particleSystem.isPlaying)
         {
-            cnt = 0;
 
             particleSystem.Emit(particleNumber);//将刚刚初始化的particleNumber个粒子发射出去
             particleSystem.GetParticles(particlesArray);
