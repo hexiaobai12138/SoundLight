@@ -6,7 +6,7 @@
 
 闯关剧情类游戏，激发对视障人士的关怀。
 
-详细软件设计文档见https://gitee.com/lantianao/Darkecho.git的wiki
+详细软件设计文档见[https://gitee.com/lantianao/Darkecho.git的wiki](https://gitee.com/lantianao/Darkecho/wikis)
 
 #### 游戏玩法
 
